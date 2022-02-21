@@ -12,7 +12,7 @@ namespace TestUnitaireTests
         {
             // Arrange
             int result = 7;
-            string path = @"C:\source\cegid-xrp-flex\testUnitaire\TestUnitaire\ressource\exemple.txt";
+            string path = @"C:\source\101_unit_test\TestUnitaire\ressource\exemple.txt";
 
             // Act
             Exemple1 exemple1 = new Exemple1();
