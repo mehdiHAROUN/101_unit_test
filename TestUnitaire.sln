@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUnitaire", "TestUnitaire.csproj", "{773CECFD-0BD9-42D5-B954-F75A44292149}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUnitaire", "TestUnitaire\TestUnitaire.csproj", "{773CECFD-0BD9-42D5-B954-F75A44292149}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUnitaireTests", "..\TestUnitaireTests\TestUnitaireTests.csproj", "{414CD49A-0A3C-4421-8FFC-C048CF54D658}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUnitaireTests", "TestUnitaireTests\TestUnitaireTests.csproj", "{414CD49A-0A3C-4421-8FFC-C048CF54D658}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
