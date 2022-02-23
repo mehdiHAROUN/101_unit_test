@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Autofac;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,17 @@ namespace TestUnitaire
 {
     internal class Program
     {
+        public static IContainer Container { get; set; }
+
         static void Main(string[] args)
         {
-            Exemple1 exemple1 = new Exemple1();
-            int result = exemple1.GetMaxNumber(@"C:\source\101_unit_test\TestUnitaire\ressource\exemple.txt");
+            var builder = new ContainerBuilder();
+            builder.RegisterType<Data2>().As<IData>();
+            Container = builder.Build();
+
+            Exemple2 exemple1 = new Exemple2() {  };
+
+            int result = exemple1.GetMaxNumber(new Data());
             Console.WriteLine($" le résultat est : {result}");
             Console.ReadLine();
         }

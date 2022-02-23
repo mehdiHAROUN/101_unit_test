@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Autofac;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,10 @@ namespace TestUnitaire
 {
     public class Exemple2
     {
-        public int GetMaxNumber()
+        public int GetMaxNumber(IData data)
         {
-            Data data = new Data(); 
-            string[] lines = data.getData();
+            //string[] lines = data.GetData();
+            string[] lines = Program.Container.Resolve<IData>().GetData();
 
             int result = 0;
 
@@ -26,11 +27,27 @@ namespace TestUnitaire
         }
     }
 
-    public class Data
+
+
+    public class Data : IData
     {
-        public string[] getData()
+        public string[] GetData()
         {
-            return System.IO.File.ReadAllLines(@"C:\source\cegid-xrp-flex\testUnitaire\TestUnitaire\ressource\exemple.txt");
+            return System.IO.File.ReadAllLines(@"C:\source\101_unit_test\TestUnitaire\ressource\exemple.txt");
         }
+
+    }
+    public class Data2 : IData
+    {
+        public string[] GetData()
+        {
+            return System.IO.File.ReadAllLines(@"C:\source\101_unit_test\TestUnitaire\ressource\exemple.txt");
+        }
+
+    }
+
+    public interface IData
+    {
+        string[] GetData();
     }
 }
